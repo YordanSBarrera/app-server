@@ -1,0 +1,22 @@
+<div class="row justify-content-center pt-2">
+    <div class="col-8">
+        <div class="card">
+            <div class="card-header">
+                {{ element.name }}
+            </div>
+            <div class="card-body">
+                <p>
+                    <strong 
+                    *ngIf="element.type === 'server'" 
+                    style="color: red">
+                        {{ element.content }}
+                    </strong>
+                    <em *ngIf="element.type === 'blueprint'">
+                        <b>
+                        {{ element.content }}</b>
+                    </em>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
